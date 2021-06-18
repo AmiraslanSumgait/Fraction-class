@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Fraction_class
 {
@@ -65,7 +65,11 @@ namespace Fraction_class
             }
             public void Print()
             {
-
+                if (denominator == 0)
+                {
+                    Console.WriteLine("The denominator cannot be 0");
+                    return;
+                }
                 if (numerator % denominator == 0) Console.WriteLine(numerator);
                 else Console.WriteLine($"{numerator}/{denominator}");
             }
@@ -74,7 +78,7 @@ namespace Fraction_class
         static void Main(string[] args)
         {
 
-            Fraction f1 = new Fraction(5, 10);
+            Fraction f1 = new Fraction(5,10 );
             Fraction f2 = new Fraction(4, 15);
             Fraction result1 = f1.Multiply(f2);
             result1.Simpilify();
